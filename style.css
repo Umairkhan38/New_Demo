@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Libre+Baskerville:ital@1&display=swap');
+
+body{
+    margin:0px;
+    padding:0px;
+    font-family:sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2021/12/09/11/53/empire-state-building-6858030__340.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    min-height:100vh;
+
+}
+
+.navbar{
+    /* background-color: #08085c; */
+    width:100%;
+    border:2px solid none;
+}
+.navbar ul{
+    /* overflow:auto; */
+    display:flex;
+    /* flex-wrap: wrap; */
+}
+
+.navbar li{
+   /* float:left; */
+   list-style: none;
+   margin:19px 20px;
+}
+
+
+.navbar a{
+    padding:5px 5px;
+    color:white;
+    font-size: 1.1rem;
+    text-decoration:none;
+}
+
+.navbar span{
+    margin:12px ;
+}
+
+
+.search {
+    /* float: right; */
+    margin-top: 9px;
+    margin-right: 13px;
+    
+}
+
+.search input{
+padding:9px;  
+border: 2px solid rgb(4 124 161);
+border-radius:15px;
+}
+
+.heading{
+    float: left;
+    color: white;
+    margin: 14px 0px 0px 22px;
+    font-family: 'Benne', serif;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.navbar li a:hover{
+    padding:12px 13px;
+    color:rgb(4 124 161);
+    background-color: white;
+    border-radius: 13px;
+}
+.heading:hover{
+    padding: 13px 17px;
+    color: rgb(4 124 161);
+    margin-top:4px;
+    background-color:white;
+    border-radius: 13px;
+    cursor:pointer;
+}
+
+#para2{
+    position:absolute;
+    top:70%;
+    left:50%;
+}
+
+
+
+
+.qoute{
+    text-align: center;
+    color: white;
+}
+
+
+.cards
+{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.card{
+    border:2px solid white;
+    padding:8px 8px 14px 8px;
+    border-radius:15px;
+    max-width: 200px;
+    max-height:500px;
+    background-color: aliceblue;
+    margin-top:15px;
+}
+
+.card img{
+    width:200px;
+    height:200px;
+    border-radius: 10px;
+}
+
+.card p{
+    color:black;
+    word-wrap: break-word;
+}
+
+.card:hover{
+
+    box-shadow: 8px 5px 4px grey;
+    transition:ease-in-out 1s;
+    
+}
+
+.navbar a.active{
+    padding:12px 13px;
+    color:rgb(4 124 161);
+    background-color: white;
+    border-radius: 13px;
+    
+}
+
+.icon{
+    float:right;
+    display: none;
+}
+
+/*  Media Queries */
+
+@media (max-width:660px) {
+
+
+    .navbar{
+        background-color: rgb(0, 0,0, .5) ;
+        margin-top: -13px;
+
+    }
+    .navbar li {display:none;}
+    .navbar li:nth-child(1){display:block;}
+    .responsive a.active{display:block;}
+    .icon{
+        display:block;
+        float:right;
+    }
+    .heading{
+        padding:3px 0px 0px 6px;
+    }
+    .navbar li{
+       margin:14px 8px;
+
+    }
+
+}
+
+
+/* if responsive class is added to the navbar */
+
+@media (max-width:660px){
+
+     .responsive{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(0, 0,0, .5) ;
+    }
+
+    .responsive ul li  a.active{
+    padding: 12px 119px 12px 128px;
+    color: rgb(4 124 161);
+    background-color: white;
+    border-radius: 13px;
+    }
+
+    .responsive a.icon{
+        position:absolute;
+        right:19px;
+        top:12px;
+    
+     }
+
+    .responsive li {
+        float:none;
+        display:block;
+        flex-direction: column; 
+        text-align:left;
+
+    }
+    .responsive ul{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 28px;
+    }
+
+}
+
