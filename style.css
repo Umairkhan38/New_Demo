@@ -17,6 +17,7 @@ body{
     width:100%;
     border:2px solid none;
 }
+
 .navbar ul{
     /* overflow:auto; */
     display:flex;
@@ -109,12 +110,42 @@ border-radius:15px;
     max-height:500px;
     background-color: aliceblue;
     margin-top:15px;
+    transition:all 1s ease-in-out ;
+    cursor: pointer;
 }
+
+.card:hover{
+
+    box-shadow: 8px 5px 4px rgb(41, 39, 39);
+    transform:scale(1.03);   
+    margin-bottom:20px;
+}
+
 
 .card img{
     width:200px;
     height:200px;
     border-radius: 10px;
+}
+.card img:hover{
+    animation:umair 5s ease-in-out 20 backwards;
+
+}
+
+@keyframes umair {
+    
+    0%{
+        object-fit:cover;
+    }
+    25%{
+        opacity:0.5;
+        object-fit:contain;
+    }
+    75%{
+        opacity:0.3;
+        object-fit:fill;
+    }
+    
 }
 
 .card p{
@@ -122,12 +153,7 @@ border-radius:15px;
     word-wrap: break-word;
 }
 
-.card:hover{
 
-    box-shadow: 8px 5px 4px grey;
-    transition:ease-in-out 1s;
-    
-}
 
 .navbar a.active{
     padding:12px 13px;
@@ -170,8 +196,8 @@ border-radius:15px;
 }
 
 
-/* if responsive class is added to the navbar */
 
+/* if responsive class is added to the navbar */
 @media (max-width:660px){
 
      .responsive{
@@ -210,3 +236,61 @@ border-radius:15px;
 
 }
 
+
+.box{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+/* grid-template-rows: repeat(2,1fr); */
+background-color: rgb(8, 8, 50);
+padding:20px;
+border-radius:18px;
+grid-column-gap:1.2rem;
+grid-row-gap:1rem;
+}
+
+/* .items:first-child{
+    /* grid-column-start:1;
+    grid-column-end:3; */
+     /* grid-row-start:1;
+    grid-row-end:3;  */
+
+    /* grid-column:1/3; 
+
+} */
+
+
+.items{
+    border:2px solid whitesmoke;
+    background-color: rgb(30 214 237);
+    /* height:200px; */
+    /* width:200px; */
+    text-align: center;
+    padding:10px;
+    color:rgb(8, 8,5);
+    border-radius:5px;
+} 
+
+.a-items{
+    border:2px solid black;
+    background-color: rgb(181, 101, 255);
+    padding:12px;
+}
+
+.container{
+    display:grid;
+    grid-template-areas:
+     'navbar navbar navbar'
+    'aside section section';
+    grid-column-gap:4px;
+    grid-row-gap:4px;
+}
+
+#navbar{
+    grid-area: navbar;
+}
+#section{
+    grid-area: section;
+}
+#aside{
+    grid-area: aside;
+}

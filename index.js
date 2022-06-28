@@ -117,3 +117,24 @@ function myFunction(){
         x.className="navbar";
     }
 }
+
+
+
+//Searching Functionality
+
+let arr=['jack','lamda','kutta','billi']
+let input=document.getElementById("search");
+let Response= document.getElementById("thought");
+input.addEventListener("input",()=>{
+let val=input.value;    
+// console.log(val);
+for(let i=0;i<arr.length;i++){
+    if(val.charAt(0)==arr[i].charAt(0)){
+    Response.innerHTML=`<h1 class="qoute">${arr[i]} </h1>`
+    console.log(arr[i]);
+        break;
+}
+Response.innerHTML=`<h1 class="qoute">${val}</h1>`
+
+}
+})
